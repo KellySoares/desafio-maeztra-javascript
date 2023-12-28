@@ -14,7 +14,7 @@ const inputs = [
     `'[', '{', '{', '(', ')'`,
     `'(', '{', '(', '}', ')', ')'`
 ]
-function VerificaSequencia({ valueInput }) {
+function VerificaSequencia({ stringInput }) {
     //Iniciando variaveis de pilha, fila, lista e pares de simbolos.
 
     let pilha = [] // Variavel para adicionar simbolos abertos
@@ -29,20 +29,20 @@ function VerificaSequencia({ valueInput }) {
     quebra a string em arrays excluindo caracteres como ' e ,
     filtra apenas elementos que possuem caracteres como parenteses, colchetes e chaves
     */
-    const input = valueInput.split(/[' ,]/).filter(item => item !== '')
+    const arrayChar = stringInput.split(/[' ,]/).filter(item => item !== '')
     //Verfica se o array está vazio
-    if (input.length === 0) return {
-        sequencia: input,
-        resultado: `é uma sequência válida`
+    if (arrayChar.length === 0) return {
+        sequencia: arrayChar,
+        mensagem: `é uma sequência válida`
     }
     //verifica se o array possui apenas um elemento
-    if (input.length === 1) return {
-        sequencia: input.join(' '),
-        resultado: `não é uma sequência válida (O número de caracteres está incorreto)`
+    if (arrayChar.length === 1) return {
+        sequencia: arrayChar.join(' '),
+        mensagem: `não é uma sequência válida (O número de caracteres está incorreto)`
     }
 
     /*
-    Utilizei uma estrutura de repetição para iterar sobre o array formado
+    Utilizei uma estrutura de repetição para iterar sobre o array arrayChar formado
     caso seja o primeiro indice do array:
         Se os simbolos estiverem fechados é acrescentado mais 1 no objeto pares, conforme o simbolo iterado
         Se os simbolos estiverem abertos é acrescentados do array de pilha
@@ -58,8 +58,8 @@ function VerificaSequencia({ valueInput }) {
 
     
     */
-    for (var i = 0; i < input.length; i++) {
-        const char = input[i]
+    for (var i = 0; i < arrayChar.length; i++) {
+        const char = arrayChar[i]
         if (i === 0) {
             if (char === ')') pares.parenteses++
             else if (char === ']') pares.colchetes++
@@ -175,37 +175,37 @@ function VerificaSequencia({ valueInput }) {
     if (pares.colchetes > 0) simbolos.push('colchete')
 
     /* Verifica se o numero de caracteres está correto */
-    if (input.length % 2 === 0) {
+    if (arrayChar.length % 2 === 0) {
         /* Verifica se e uma sequencia válida conforme o resultado obtido no objetos pares{} */
         if (pares.parenteses === 0 && pares.colchetes === 0 && pares.chave === 0) {
             return {
-                sequencia: input.join(' '),
-                resultado: `é uma sequência válida`
+                sequencia: arrayChar.join(' '),
+                mensagem: `é uma sequência válida`
             }
         } else {
 
             return {
-                sequencia: input.join(' '),
-                resultado: `não é uma sequência válida (O número de caracteres está correto, mas o posicionamento de uma ${simbolos.join('/')} está incorreto)`
+                sequencia: arrayChar.join(' '),
+                mensagem: `não é uma sequência válida (O número de caracteres está correto, mas o posicionamento de uma ${simbolos.join('/')} está incorreto)`
             }
         }
 
     } else {
         return {
-            sequencia: input.join(' '),
-            resultado: `não é uma sequência válida (Há uma ${simbolos.join('/')} posicionado incorretamente)`
+            sequencia: arrayChar.join(' '),
+            mensagem: `não é uma sequência válida (Há uma ${simbolos.join('/')} posicionado incorretamente)`
         }
     }
 
 }
 //Iteração do Array de valores iniciais
-inputs.forEach(valueInput => {
-    //Acesso da funcao com cada valor do array, retornando um result como resposta
+inputs.forEach(stringInput => {
+    //Acesso da funcao com uma string com a sequencia de caracteres, retornando um result como resposta
     const result = VerificaSequencia({
-        valueInput: valueInput
+        stringInput: stringInput
     })
-    //Print no console do valor de entrada e resultado da função
-    console.log(`${result.sequencia} ${result.resultado}`)
+    //Print no console do valor de entrada e mensagem da função
+    console.log(`${result.sequencia} ${result.mensagem}`)
 })
 
 
