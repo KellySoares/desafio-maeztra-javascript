@@ -16,12 +16,12 @@ function VerificaPossibilidade({ qddPessoas }) {
 }
 //Iteração do Array de valores iniciais
 inputs.forEach(qddPessoas => {
-    //Acesso da funcao com cada valor do array, retornando um result como resposta
-    const result = VerificaPossibilidade({
+    //Acesso da funcao com a quantidade de pessoas num grupo de amigos do array, retornando quantidade de poses como resposta
+    const poses = VerificaPossibilidade({
         qddPessoas: qddPessoas
     })
     //Print no console do valor de entrada e resultado da função
-    console.log(`Em um grupo de ${qddPessoas} amigos, eles podem se organizar ${result} maneiras distintas`)
+    console.log(`Em um grupo de ${qddPessoas} amigos, eles podem se organizar ${poses} maneiras distintas`)
 })
 
 
