@@ -18,35 +18,37 @@ const inputs = [
     '11111111111111111111111111111111111111111111111111111111111111111111111234566777777777777',
     '1'
 ]
-function VerificaOrdenacao({ valueInput }) {
+function VerificaOrdenacao({ intPositivo }) {
     //Iniciando variaveis de definição do tipo de ordenação
     let ASC = false
     let DESC = false
     /*Pega o valor passado por parametro, transforma em string e 
-    quebra a string em array de caracteres(números)*/
-    const input = valueInput.toString().split('');
-    //Verifica se o array "input" possui apenas um numero
-    if (input.length === 1) return (`Está ordenado`)
+    quebra a string em array de dígitos*/
+    const digitos = intPositivo.toString().split('');
+    //Verifica se o array "digitos" possui apenas um numero
+    if (digitos.length === 1) return (`Está ordenado`)
     /*
-    Itera sobre o array input, comecando pelo segundo item do array
+    Itera sobre o array digitos, comecando pelo segundo item do array
     caso seja o segundo, 
             compara com o primeiro e verifica se é crescente, decrescente ou se é ambos(Repetidos)
     caso nao seja o segundo elemento, 
             vai verificar se existe diferenca de um digito ou menos(0) entre o atual e anterior. 
             E ao mesmo tempo estará definindo a ordem crescente, decrescente ou repetido
     */
-    for (var i = 1; i < input.length; i++) {
+    for (var i = 1; i < digitos.length; i++) {
+        const digito = digitos[i]
+        const digitoAnterior  = digitos[i - 1]
         if (i == 1) {
-            if (((input[i] - input[i - 1]) == 1 || (input[i] - input[i - 1]) == 0)) {
+            if (((digito - digitoAnterior) == 1 || (digito - digitoAnterior) == 0)) {
                 ASC = true
             }
-            if (((input[i] - input[i - 1]) == '-1' || (input[i] - input[i - 1]) == 0)) {
+            if (((digito - digitoAnterior) == '-1' || (digito - digitoAnterior) == 0)) {
                 DESC = true
             }
         } else {
             
             if (ASC) {
-                if (((input[i] - input[i - 1]) == 1 || (input[i] - input[i - 1]) == 0)) {
+                if (((digito - digitoAnterior) == 1 || (digito - digitoAnterior) == 0)) {
                     ASC = true
                 } else {
                     ASC = false
@@ -54,7 +56,7 @@ function VerificaOrdenacao({ valueInput }) {
                 }
             }
             if (DESC) {
-                if (((input[i] - input[i - 1]) == '-1' || (input[i] - input[i - 1]) == 0)) {
+                if (((digito - digitoAnterior) == '-1' || (digito - digitoAnterior) == 0)) {
                     DESC = true
                 } else {
                     DESC = false
@@ -79,13 +81,13 @@ function VerificaOrdenacao({ valueInput }) {
 
 }
 //Iteração do Array de valores iniciais
-inputs.forEach(valueInput => {
+inputs.forEach(intPositivo => {
     //Acesso da funcao com cada valor do array, retornando um result como resposta
     const result = VerificaOrdenacao({
-        valueInput: valueInput
+        intPositivo: intPositivo
     })
     //Print no console do valor de entrada e resultado da função
-    console.log(`Input ${valueInput} -> ${result}`)
+    console.log(`Input ${intPositivo} -> ${result}`)
 })
 
 
