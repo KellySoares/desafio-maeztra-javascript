@@ -6,7 +6,8 @@ const inputs = [
     [1938, 1999],
     [1985, 1990],
     [2000, 2002],
-    [2010, 2020]
+    [2010, 2020],
+    [1966, 1980]
 ]
 function VerificaAnosTrabalhados({ anosEntrada }) {
     //Iniciando variavel do tipo objeto para armazenar os anos e total de pessoas por ano
@@ -34,7 +35,6 @@ function VerificaAnosTrabalhados({ anosEntrada }) {
         });
 
     });
-    
     //Utiliza a função Object.values para transformar o objeto anosTotalPessoas em array e Math.max para encontrar o maior valor
     const totalMaior = Math.max(...Object.values(anosTotalPessoas))
 
