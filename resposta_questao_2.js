@@ -12,25 +12,25 @@ const inputs = [
     [4],
     [1, 1, 1, 1, 1, 1, 1]
 ]
-function VerificaDuplicata({ valueInput }) {
+function VerificaDuplicata({ arrayInteiros }) {
     //Utilizei a função filter para buscar os elementos repetidos
-    const valorDuplicados = valueInput.filter((item, index) => {
+    const valorDuplicados = arrayInteiros.filter((item, index) => {
         //verifica o primeiro indice do array que contém o item iterado e verifica se esse indice é diferente do atual
-        return valueInput.indexOf(item) !== index
+        return arrayInteiros.indexOf(item) !== index
     })
     //Utilizei set, pois ele permite armazenar apenas valores únicos de qualquer tipo. Retornando assim um array sem repetição
-    const arraySemRepeticao = [...new Set(valorDuplicados)]
-    return arraySemRepeticao
+    const valorDupSemRepeticao = [...new Set(valorDuplicados)]
+    return valorDupSemRepeticao
 
 }
 //Iteração do Array de valores iniciais
-inputs.forEach(valueInput => {
+inputs.forEach(arrayInteiros => {
     //Acesso da funcao com cada valor do array, retornando um result como resposta
     const result = VerificaDuplicata({
-        valueInput: valueInput
+        arrayInteiros: arrayInteiros
     })
     //Print no console do valor de entrada e resultado da função
-    console.log(`Input [${valueInput}] Output [${result}]`)
+    console.log(`Input [${arrayInteiros}] Output [${result}]`)
 })
 
 
