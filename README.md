@@ -13,10 +13,13 @@ Se não o possuir, você pode clicar nesse link para fazer o download: [Clique A
 
 ```bash
 git clone git@github.com:KellySoares/desafio-maeztra-javascript.git
+```
+2. Acesse a pasta do projeto
+```bash
 cd desafio-maeztra-javascript
 ```
 
-2. Tendo o node instalado em sua máquina, apenas rode o comando a seguir:
+3. Tendo o node instalado em sua máquina, apenas rode o comando a seguir:
 ```bash
 node nome_arquivo.js
 ```
