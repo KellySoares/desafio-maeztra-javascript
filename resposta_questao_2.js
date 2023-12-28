@@ -25,7 +25,7 @@ function VerificaDuplicata({ arrayInteiros }) {
 }
 //Iteração do Array de valores iniciais
 inputs.forEach(arrayInteiros => {
-    //Acesso da funcao com cada valor do array, retornando um result como resposta
+    //Acesso da funcao com array de inteiros passado no parametro, retornando um result como resposta
     const result = VerificaDuplicata({
         arrayInteiros: arrayInteiros
     })
