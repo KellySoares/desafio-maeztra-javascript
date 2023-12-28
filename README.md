@@ -3,6 +3,25 @@
 
 Este teste se divide em duas etapas, a primeira é um teste lógico resolvido em Javascript. A segunda é um teste de Layout serparado na pasta Layout com suas especificações.
 
+
+## Para executar
+
+Para executar o Teste lógico é necessário ter o node instalado em sua máquina. 
+Se não o possuir, você pode clicar nesse link para fazer o download: [Clique Aqui](https://nodejs.org/en)
+
+1. Clone o repositório na sua máquina
+
+```bash
+git clone git@github.com:KellySoares/desafio-maeztra-javascript.git
+cd desafio-maeztra-javascript
+```
+
+2. Tendo o node instalado em sua máquina, apenas rode o comando a seguir:
+```bash
+node nome_arquivo.js
+```
+
+
 ## Teste lógico
 
 ***1 - Crie uma função que receba um valor INTEIRO positivo, e verifique se os DÍGITOS estão em ordenação sequencial CRESCENTE ou DECRESCENTE. Pode considerar dígitos iguais como sequenciais (Variação de um dígito para o outro deve ser 1 ou menor)***
