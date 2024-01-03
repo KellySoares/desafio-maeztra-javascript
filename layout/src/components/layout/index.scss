@@ -110,9 +110,6 @@ footer {
 
 .Container {
     text-align: -webkit-center;
-    margin: 10em 80px 0;
+    position: relative;
 
-    @include lt-lg {
-        margin: 6em 30px 0;
-    }
 }

@@ -44,7 +44,6 @@
         line-height: 24.34px !important;
 
         &_options {
-            border: 0px !important;
             padding: 0;
             margin-right: 0.6em !important;
 
@@ -55,6 +54,21 @@
 
         .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
             padding: 0px;
+        }
+    }
+
+    &-menu-category {
+        &_link {
+            line-height: 21px;
+            text-align: center;
+            background-color: $background-white !important;
+            color: $color-secundary !important;
+
+            &-active {
+                color: $color-yellow !important;
+                font-weight: 700 !important;
+
+            }
         }
     }
 }

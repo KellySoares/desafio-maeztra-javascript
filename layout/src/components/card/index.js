@@ -22,6 +22,7 @@ const Card = (props) => {
                 <Grid container direction='column' sx={{ textAlign: 'left', width: '80%' }}>
                     <div className="card-option">{props.product.option.map((cor, index) => (
                         <ButtonComp
+                            optionCor={cor}
                             key={index}
                             style={{
                                 my: 1, color: 'white',

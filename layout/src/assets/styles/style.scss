@@ -25,9 +25,17 @@ body {
   font-weight: $font-weight !important;
   font-size: $font-size !important;
 
+  letter-spacing: 0px;
   background-color: $color-primary;
 }
 
-section{
-  margin: 2em 0;
+section {
+  margin: 0 2em 2em;
+
+  @include lg {
+    margin: 0 5em 2em;
+  }
+  @include xl {
+    margin: 0 10em 2em;
+  }
 }

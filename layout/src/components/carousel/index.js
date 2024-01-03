@@ -17,7 +17,7 @@ import { Keyboard, Navigation, Pagination } from 'swiper/modules';
 function Item(props) {
     return (
         <>
-            <Paper >
+            <Paper sx={{ maxHeight: { xs: '320px', md: '600px' } }} >
                 <figure id="container">
                     <img src={props.item.image} alt={props.item.title} />
                     <figcaption>
@@ -25,7 +25,7 @@ function Item(props) {
                         <p className='description'>{props.item.description}</p>
                         <ButtonComp
                             key='Conferir'
-                            style={{ my: 1, color: 'white', display: 'flex', borderRadius: '10px' }}
+                            style={{ my: 1, color: 'white', display: 'flex', borderRadius: { xs: '4px', md: '10px' } }}
                             name='Conferir' classname="banner" />
                     </figcaption>
                 </figure>

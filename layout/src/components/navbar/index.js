@@ -17,11 +17,22 @@ import Search from '../search';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import logo from "../../assets/images/header/logo-maeztra-novo.svg";
+import icons from "../../assets/images/icons/dress.svg";
 
 import './index.scss';
 
 const pages = [{ 'name': 'Minha Conta', 'icon': <PermIdentityIcon /> },
 { 'name': 'Minha Conta', 'icon': <FavoriteBorderOutlinedIcon /> }];
+
+const category = [
+    { 'name': 'Novidades', 'link': '', 'icon': icons, 'principal': true },
+    { 'name': 'Vestidos', 'link': '', 'icon': '', 'principal': false },
+    { 'name': 'Roupas', 'link': '', 'icon': '', 'principal': false },
+    { 'name': 'Sapatos', 'link': '', 'icon': '', 'principal': false },
+    { 'name': 'Lingerie', 'link': '', 'icon': '', 'principal': false },
+    { 'name': 'Acessórios', 'link': '', 'icon': '', 'principal': false },
+    { 'name': 'OUTLET', 'link': '', 'icon': '', 'principal': false }
+];
 
 function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,8 +48,22 @@ function NavBar() {
 
 
     return (
-        <AppBar className='AppBar'>
+        <><AppBar className='AppBar'>
+            <Box
+                    noWrap
+                    sx={{
+                        mr: 2,
+                        display: 'flex',
+                        fontSize: '12px',
+                        color: '#FFFFFF',
+                        justifyContent: 'center',
+                        backgroundColor: '#353535',
+                        marginRight: '0'
+                    }}>
+                    Acompanhe as melhores promoções disponíveis aqui na Maeztra.
+                </Box>
             <Container maxWidth="xl">
+                
                 <Toolbar disableGutters>
 
                     <Typography variant="h6"
@@ -91,6 +116,12 @@ function NavBar() {
                                     <Typography textAlign="center">{page.name}</Typography>
                                 </MenuItem>
                             ))}
+                            <Typography textAlign="center">Categorias</Typography>
+                            {category.map((page, index) => (
+                                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">{page.name}</Typography>
+                                </MenuItem>
+                            ))}
                         </Menu>
                     </Box>
                     <Typography variant="h5"
@@ -114,12 +145,12 @@ function NavBar() {
                     <Box sx={{ flexGrow: 1, display: 'flex', alignItems: "center" }} gap={1} className="AppBar_box-desktop">
 
                         <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }} gap={1}>
-                            
+
                             {pages.map((page, index) => (
                                 <ButtonComp key={index}
-                                onClick={handleCloseNavMenu}
-                                style={{ my: 1, color: 'white', display: 'flex', borderRadius: '8px' }}
-                                icons={page.icon} name={page.name} classname="header" />
+                                    onClick={handleCloseNavMenu}
+                                    style={{ my: 1, color: 'white', display: 'flex', borderRadius: '8px' }}
+                                    icons={page.icon} name={page.name} classname="header" />
                             ))}
                         </Box>
                         <Nav>
@@ -131,6 +162,27 @@ function NavBar() {
                 </Toolbar>
             </Container>
         </AppBar>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} gap={1} className="menu-category">
+
+                {category.map((category, index) => (
+                    category.principal ?
+                        <ButtonComp key={index}
+                            style={{ my: 1, color: 'white', borderRadius: '8px' }}
+                            icons={
+                                <img alt={category.name} src={category.icon} />
+                            }
+                            name={category.name}
+                            classname="menu-category_link-active" />
+                        : <ButtonComp key={index}
+                            style={{ my: 1, color: 'white', borderRadius: '8px' }}
+
+                            name={category.name}
+                            classname="menu-category_link" />
+
+                ))}
+            </Box>
+        </>
+
     );
 }
 export default NavBar;

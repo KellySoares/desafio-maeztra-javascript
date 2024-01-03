@@ -58,7 +58,7 @@ const Cart = () => {
             <ButtonComp
                 style={{ my: 1, color: 'white', display: { xs: 'none', md: 'flex' }, borderRadius: '8px' }}
                 icons={
-                    <Badge badgeContent={cart.value} color="error">
+                    <Badge badgeContent={cart.value} color="primary" >
                         <img alt="edit" src={CartImg} />
                     </Badge>
                 }
@@ -73,7 +73,7 @@ const Cart = () => {
                 color="inherit"
                 sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, alignItems: "center" }}
                 onClick={handleClickOpen} >
-                <Badge badgeContent={cart.value} color="error">
+                <Badge badgeContent={cart.value} color="primary">
                     <img alt="edit" src={CartImg} />
                 </Badge>
             </IconButton >
