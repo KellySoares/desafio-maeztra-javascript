@@ -1,0 +1,60 @@
+@import "../../assets/styles/style.scss";
+
+.button {
+
+    border: 0px !important;
+    text-transform: capitalize !important;
+    color: $color-white !important;
+    letter-spacing: 0px !important;
+
+    &-header {
+        border: 1px solid transparent !important;
+        padding: 10px 20px !important;
+        color: $color-secundary !important;
+        line-height: 21px !important;
+
+        &:hover {
+            border-color: $color-yellow !important;
+            background-color: $color-white !important;
+        }
+
+        .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
+            padding: 0px;
+        }
+    }
+
+    &-banner {
+        padding: 10px 20px !important;
+        background-color: $color-yellow !important;
+
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        line-height: 20px !important;
+
+
+        .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
+            padding: 0px;
+        }
+    }
+
+    &-card {
+        padding: 5px 20px !important;
+        background-color: $color-yellow !important;
+        font-size: 16px !important;
+        line-height: 24.34px !important;
+
+        &_options {
+            border: 0px !important;
+            padding: 0;
+            margin-right: 0.6em !important;
+
+            &:hover {
+                border: 1px solid $color-secundary !important;
+            }
+        }
+
+        .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
+            padding: 0px;
+        }
+    }
+}

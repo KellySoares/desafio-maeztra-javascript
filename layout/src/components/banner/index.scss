@@ -1,0 +1,36 @@
+@import "../../assets/styles/style.scss";
+
+
+.banner {
+    color: $color-black !important;
+    &-image {
+        position: relative;
+        max-height: 480px;
+        min-height: 184px;
+        min-width: auto;
+        max-width: 1114px;
+        border-radius: 4px;
+        display: initial;
+        margin: auto;
+        overflow: hidden;
+    
+        img {
+            width: -webkit-fill-available;
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            top: -58px;
+            border-radius: 4px;
+        }
+        @include lt-lg {
+            width: 100%;
+    
+            img {
+                top: 0;
+            }
+        }
+    
+    }
+
+}
+

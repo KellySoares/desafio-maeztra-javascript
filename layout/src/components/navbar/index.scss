@@ -1,0 +1,17 @@
+@import "../../assets/styles/style.scss";
+
+.AppBar {
+    background: $background-white !important;
+    box-shadow: 0px 4px 6px 0px #00000014 !important;
+    color: $color-secundary !important;
+    &_box-desktop {
+        justify-content: right !important;
+    }
+    &_IconButton {
+        color: $color-black;
+    }
+}
+
+
+
+

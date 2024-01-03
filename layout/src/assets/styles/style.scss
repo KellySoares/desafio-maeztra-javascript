@@ -1,0 +1,33 @@
+@import "./mixin.scss";
+
+$color-primary: #FAFAFA;
+$color-secundary: #353535;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-yellow: #FAA500;
+
+$background-primary: #FAFAFA;
+$background-secundary: #353535;
+$background-white: #FFFFFF;
+
+$color-button-white: #FFFFFF;
+$color-button-yellow: #FAA500;
+
+
+$font-primary: 'Titillium Web';
+$font-size: 14px;
+$font-weight: 400;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary !important;
+  font-weight: $font-weight !important;
+  font-size: $font-size !important;
+
+  background-color: $color-primary;
+}
+
+section{
+  margin: 2em 0;
+}
