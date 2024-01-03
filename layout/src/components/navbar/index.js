@@ -50,20 +50,20 @@ function NavBar() {
     return (
         <><AppBar className='AppBar'>
             <Box
-                    noWrap
-                    sx={{
-                        mr: 2,
-                        display: 'flex',
-                        fontSize: '12px',
-                        color: '#FFFFFF',
-                        justifyContent: 'center',
-                        backgroundColor: '#353535',
-                        marginRight: '0'
-                    }}>
-                    Acompanhe as melhores promoções disponíveis aqui na Maeztra.
-                </Box>
+                noWrap
+                sx={{
+                    mr: 2,
+                    display: 'flex',
+                    fontSize: '12px',
+                    color: '#FFFFFF',
+                    justifyContent: 'center',
+                    backgroundColor: '#353535',
+                    marginRight: '0'
+                }}>
+                Acompanhe as melhores promoções disponíveis aqui na Maeztra.
+            </Box>
             <Container maxWidth="xl">
-                
+
                 <Toolbar disableGutters>
 
                     <Typography variant="h6"
@@ -141,9 +141,9 @@ function NavBar() {
                         <img width="140px" src={logo} alt="Logo" />
                     </Typography>
 
-                    <Search />
-                    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: "center" }} gap={1} className="AppBar_box-desktop">
 
+                    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: "center", justifyContent: 'right' }} gap={1} className="AppBar_box-desktop">
+                        <Search />
                         <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }} gap={1}>
 
                             {pages.map((page, index) => (
@@ -153,16 +153,16 @@ function NavBar() {
                                     icons={page.icon} name={page.name} classname="header" />
                             ))}
                         </Box>
-                        <Nav>
+                        
 
                             <Cart />
-                        </Nav>
+                        
 
                     </Box>
                 </Toolbar>
             </Container>
         </AppBar>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} gap={1} className="menu-category">
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} gap='3em' className="menu-category">
 
                 {category.map((category, index) => (
                     category.principal ?
