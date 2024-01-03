@@ -33,3 +33,8 @@ $ npm start
 
 Executa o aplicativo no modo de desenvolvimento.
 Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador.
+
+
+# Link para acesso do projeto em Produção
+
+[Clique Aqui](https://kellysoares.github.io/desafio-maeztra-javascript/) para visualizar o projeto online
