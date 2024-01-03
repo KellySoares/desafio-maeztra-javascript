@@ -15,8 +15,7 @@ function App() {
   return (
     <Provider store={store}>
       <ProductsProvider>
-        <Router>
-
+        <Router basename={'desafio-maeztra-javascript'}>
           <Layout >
             <MainRoutes />
           </Layout>
