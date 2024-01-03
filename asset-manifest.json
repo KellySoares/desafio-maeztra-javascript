@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/desafio-maeztra-javascript/layout/static/css/main.df3a6e02.css",
-    "main.js": "/desafio-maeztra-javascript/layout/static/js/main.52a906a0.js",
-    "static/media/logo-maeztra-novo.svg": "/desafio-maeztra-javascript/layout/static/media/logo-maeztra-novo.dc939f26b70f8ce891572620b48daece.svg",
-    "static/media/cart.svg": "/desafio-maeztra-javascript/layout/static/media/cart.a51f61e6e18e1a03c7d2e0807d28ed48.svg",
-    "index.html": "/desafio-maeztra-javascript/layout/index.html",
-    "static/media/next.svg": "/desafio-maeztra-javascript/layout/static/media/next.7d0c880bb24f90b54373.svg",
-    "static/media/prev.svg": "/desafio-maeztra-javascript/layout/static/media/prev.c662d0daf45b0c586685.svg",
-    "main.df3a6e02.css.map": "/desafio-maeztra-javascript/layout/static/css/main.df3a6e02.css.map",
-    "main.52a906a0.js.map": "/desafio-maeztra-javascript/layout/static/js/main.52a906a0.js.map"
+    "main.css": "/desafio-maeztra-javascript/static/css/main.06fdd46f.css",
+    "main.js": "/desafio-maeztra-javascript/static/js/main.1a66ad63.js",
+    "static/media/logo-maeztra-novo.svg": "/desafio-maeztra-javascript/static/media/logo-maeztra-novo.dc939f26b70f8ce891572620b48daece.svg",
+    "static/media/cart.svg": "/desafio-maeztra-javascript/static/media/cart.a51f61e6e18e1a03c7d2e0807d28ed48.svg",
+    "index.html": "/desafio-maeztra-javascript/index.html",
+    "static/media/next.svg": "/desafio-maeztra-javascript/static/media/next.7d0c880bb24f90b54373.svg",
+    "static/media/prev.svg": "/desafio-maeztra-javascript/static/media/prev.c662d0daf45b0c586685.svg",
+    "main.06fdd46f.css.map": "/desafio-maeztra-javascript/static/css/main.06fdd46f.css.map",
+    "main.1a66ad63.js.map": "/desafio-maeztra-javascript/static/js/main.1a66ad63.js.map"
   },
   "entrypoints": [
-    "static/css/main.df3a6e02.css",
-    "static/js/main.52a906a0.js"
+    "static/css/main.06fdd46f.css",
+    "static/js/main.1a66ad63.js"
   ]
 }
