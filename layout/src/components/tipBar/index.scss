@@ -1,0 +1,46 @@
+@import "../../assets/styles/style.scss";
+
+.tipbar{
+
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: 'transparent';
+        /* color of the tracking area */
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-secundary;
+        /* color of the scroll thumb */
+        border-radius: 20px;
+        /* roundness of the scroll thumb */
+        border: 0px solid $background-primary;
+        /* creates padding around scroll thumb */
+    }
+
+    &-box{
+        font-family: $font-primary;
+        margin: 0;
+        
+        &-text{
+            font-weight: 700;
+            text-wrap: nowrap;
+            margin: 0 0 3px;
+            color: $color-secundary;
+        }
+        &-description{
+            font-size: 12px;
+            margin: 0;
+            color: $color-black;
+        }
+        &-image{
+            width: 100%;
+        }
+    }
+    
+}
