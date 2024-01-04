@@ -9,6 +9,10 @@
 }
 
 #Banner {
+    @media screen and (max-width: 900px) {
+        padding: 5em 0 0;
+    }
+
     .swiper-pagination>.swiper-pagination-bullet {
         background-color: transparent;
         opacity: 1;
@@ -28,32 +32,38 @@
 
     .swiper-button-next,
     .swiper-button-prev {
-        margin: 0 20px;
+        margin: 0 5em;
 
-        
-        @include lg {
+        @include lt-xl{
             margin: 0 5em;
-          }
-          @include xl {
-            margin: 0 9em;
-          }
+        }
+        @include lt-lg {
+            margin: 0 20px;
+        }
     }
 
     .swiper-button-next {
         background: url("../../assets/images/icons/next.svg") no-repeat;
+        @include lt-lg {
+            background-size: 1em;
+        }
     }
 
     .swiper-button-prev {
         background: url("../../assets/images/icons/prev.svg") no-repeat;
-    }
+        @include lt-lg {
+            background-size: 1em;
+        }
 
+    }
 
     
 }
 
 #Slider {
     .swiper-slide {
-        width: 308px !important;
+        max-width: 308px !important;
+        height: auto !important;
     }
 
     .swiper-button-next {

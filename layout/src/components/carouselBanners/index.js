@@ -8,17 +8,20 @@ import './index.scss';
 const CarouselBanners = (props) => {
     return (
         <>
-            <Paper sx={{ maxHeight: { xs: '320px', md: '600px' } }} >
-                <figure id="container">
+            <Paper sx={{ height: { xs: '320px', md: '600px' } }} >
+                <figure className="carousel_banners">
                     <img src={props.item.image} alt={props.item.title} />
-                    <figcaption>
-                        <h2 className='title'>{props.item.title}</h2>
-                        <p className='description'>{props.item.description}</p>
+                    <div className='carousel_banners-content'>
+
+                        <h2 className='carousel_banners-content_title'>{props.item.title}</h2>
+                        <p className='carousel_banners-content_description'>{props.item.description}</p>
                         <ButtonComp
                             key='Conferir'
                             style={{ color: 'white', display: 'flex', borderRadius: { xs: '4px', md: '10px' } }}
                             name='Conferir' classname="banner" />
-                    </figcaption>
+
+                    </div>
+
                 </figure>
             </Paper>
         </>
