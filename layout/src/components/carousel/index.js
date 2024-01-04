@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 
 
 import './index.scss';
-import { Keyboard, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Keyboard, Navigation, Pagination } from 'swiper/modules';
 
 function Item(props) {
     return (
@@ -25,7 +25,7 @@ function Item(props) {
                         <p className='description'>{props.item.description}</p>
                         <ButtonComp
                             key='Conferir'
-                            style={{ my: 1, color: 'white', display: 'flex', borderRadius: { xs: '4px', md: '10px' } }}
+                            style={{ color: 'white', display: 'flex', borderRadius: { xs: '4px', md: '10px' } }}
                             name='Conferir' classname="banner" />
                     </figcaption>
                 </figure>
@@ -45,7 +45,8 @@ export default function Carousel({ itens, indicators, type, autoplay }) {
     }
     let slidesPerView = 5
     let module = [Keyboard, Navigation]
-    if (indicators) module = [Keyboard, Navigation, Pagination]
+    if (indicators) module.push(Pagination)
+    if (autoplay) module.push(Autoplay)
 
     if (type === 'Slider') {
         breakPoints = {
@@ -74,6 +75,10 @@ export default function Carousel({ itens, indicators, type, autoplay }) {
                 style={{
                     '--swiper-navigation-color': '#000',
                     '--swiper-pagination-color': '#000',
+                }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
                 }}
                 slidesPerView={1}
                 centeredSlides={false}

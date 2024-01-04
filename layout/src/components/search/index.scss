@@ -11,27 +11,21 @@
     @include xl {
         width: 50%;
     }
-
+    input{
+        font-family: $font-primary;
+        color: $color-secundary;
+        font-size: $font-size;
+    }
 
     &-input {
 
-        .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
-            font-family: $font-primary;
-            font-weight: $font-weight ;
-        }
-
         &_button {
-
-            border: 0px !important;
+            font-family: $font-primary !important;
+            font-weight: $font-weight!important;
             text-transform: capitalize !important;
             color: $color-white !important;
-            letter-spacing: 0px !important;
-            padding: 5px 30px !important;
             background-color: $color-yellow !important;
 
-            .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
-                padding: 0px;
-            }
         }
     }
 

@@ -2,7 +2,6 @@ import React from "react";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
-import { Form } from 'react-bootstrap';
 import { Button } from "@mui/material";
 
 import './index.scss';
@@ -47,7 +46,7 @@ const Search = () => {
                     InputProps={{
                         endAdornment: <Button
                             variant="contained"
-                            sx={{ my: 1, color: 'white', borderRadius: '10px', margin: '0' }}
+                            sx={{ color: 'white', borderRadius: '10px',border: '0px', margin: '0', padding: '6px 30px' }}
                             onClick={onclick}
 
                             className="search-input_button"

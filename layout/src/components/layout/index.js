@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
     return (<>
         <NavBar />
-        
+
         <Container className="Container" >{children}</Container>
 
         <footer >

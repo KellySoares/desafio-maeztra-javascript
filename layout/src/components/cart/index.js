@@ -50,13 +50,10 @@ const Cart = () => {
         setOpen(false);
     };
 
-
-
     return (
         <>
-
             <ButtonComp
-                style={{ my: 1, color: 'white', display: { xs: 'none', md: 'flex' }, borderRadius: '8px' }}
+                style={{ color: 'white', display: { xs: 'none', md: 'flex' }, borderRadius: '8px' }}
                 icons={
                     <Badge badgeContent={cart.value} color="primary" >
                         <img alt="edit" src={CartImg} />

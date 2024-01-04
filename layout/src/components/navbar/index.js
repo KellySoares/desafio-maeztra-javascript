@@ -8,7 +8,6 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import { Nav } from 'react-bootstrap';
 
 import ButtonComp from '../button';
 import Cart from '../cart';
@@ -22,7 +21,7 @@ import icons from "../../assets/images/icons/dress.svg";
 import './index.scss';
 
 const pages = [{ 'name': 'Minha Conta', 'icon': <PermIdentityIcon /> },
-{ 'name': 'Minha Conta', 'icon': <FavoriteBorderOutlinedIcon /> }];
+{ 'name': 'Favoritos', 'icon': <FavoriteBorderOutlinedIcon /> }];
 
 const category = [
     { 'name': 'Novidades', 'link': '', 'icon': icons, 'principal': true },
@@ -52,13 +51,12 @@ function NavBar() {
             <Box
                 noWrap
                 sx={{
-                    mr: 2,
+                    mr: 0,
                     display: 'flex',
                     fontSize: '12px',
                     color: '#FFFFFF',
                     justifyContent: 'center',
-                    backgroundColor: '#353535',
-                    marginRight: '0'
+                    backgroundColor: '#353535'
                 }}>
                 Acompanhe as melhores promoções disponíveis aqui na Maeztra.
             </Box>
@@ -66,17 +64,13 @@ function NavBar() {
 
                 <Toolbar disableGutters>
 
-                    <Typography variant="h6"
+                    <Typography
                         noWrap
                         component="a"
-                        href="#app-bar-with-responsive-menu"
+                        href="#"
                         sx={{
-                            mr: 2,
+                            mr: 0,
                             display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
                             textDecoration: 'none',
                         }}>
                         <img width="140px" src={logo} alt="Logo" />
@@ -124,18 +118,14 @@ function NavBar() {
                             ))}
                         </Menu>
                     </Box>
-                    <Typography variant="h5"
+                    <Typography
                         noWrap
                         component="a"
-                        href="#app-bar-with-responsive-menu"
+                        href="#"
                         sx={{
-                            mr: 2,
+                            mr: 0,
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
                             textDecoration: 'none',
                         }}>
                         <img width="140px" src={logo} alt="Logo" />
@@ -149,14 +139,14 @@ function NavBar() {
                             {pages.map((page, index) => (
                                 <ButtonComp key={index}
                                     onClick={handleCloseNavMenu}
-                                    style={{ my: 1, color: 'white', display: 'flex', borderRadius: '8px' }}
+                                    style={{ color: 'white', display: 'flex', borderRadius: '8px' }}
                                     icons={page.icon} name={page.name} classname="header" />
                             ))}
                         </Box>
-                        
 
-                            <Cart />
-                        
+
+                        <Cart />
+
 
                     </Box>
                 </Toolbar>
@@ -167,14 +157,14 @@ function NavBar() {
                 {category.map((category, index) => (
                     category.principal ?
                         <ButtonComp key={index}
-                            style={{ my: 1, color: 'white', borderRadius: '8px' }}
+                            style={{ color: 'white', borderRadius: '8px' }}
                             icons={
                                 <img alt={category.name} src={category.icon} />
                             }
                             name={category.name}
                             classname="menu-category_link-active" />
                         : <ButtonComp key={index}
-                            style={{ my: 1, color: 'white', borderRadius: '8px' }}
+                            style={{ color: 'white', borderRadius: '8px' }}
 
                             name={category.name}
                             classname="menu-category_link" />

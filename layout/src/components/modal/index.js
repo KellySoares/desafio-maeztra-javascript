@@ -55,7 +55,7 @@ const Cart = () => {
         <>
 
             <ButtonComp
-                style={{ my: 1, color: 'white', display: { xs: 'none', md: 'flex' }, borderRadius: '8px' }}
+                style={{ color: 'white', display: { xs: 'none', md: 'flex' }, borderRadius: '8px' }}
                 icons={
                     <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                         <Badge badgeContent={cart.value} color="error">

@@ -5,6 +5,7 @@ import useProducts from "../hooks/products-hooks";
 
 import Banner from "../components/banner";
 import Carousel from "../components/carousel";
+import NewsLetter from '../components/newsLetter';
 
 
 const HomePage = () => {
@@ -30,8 +31,9 @@ const HomePage = () => {
         <section className="flex flex-col gap-5 h-full w-full bg-gray-200 py-5 px-0 md:px-3 box-border">
             <Banner info={bannerStatic} />
         </section>
-        <section>
-        </section>
+        
+            <NewsLetter />
+        
 
 
     </>

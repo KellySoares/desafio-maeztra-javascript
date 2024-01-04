@@ -1,4 +1,4 @@
-@import "../../assets/styles/style.scss";
+@import "../../assets/styles/main.scss";
 
 footer {
     display: flex;
@@ -51,7 +51,6 @@ footer {
                     font-size: 16px;
                     font-weight: 700;
                     line-height: 18px;
-                    letter-spacing: 0px;
 
                 }
 
@@ -59,7 +58,6 @@ footer {
                     color: $color-black;
                     font-size: 12px;
                     line-height: 18px;
-                    letter-spacing: 0px;
 
                 }
             }
@@ -69,7 +67,6 @@ footer {
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 18px;
-                letter-spacing: 0px;
                 margin-bottom: 1em;
 
             }
@@ -78,7 +75,6 @@ footer {
                 color: $color-black;
                 font-size: 12px;
                 line-height: 18px;
-                letter-spacing: 0px;
                 margin-bottom: 1em;
 
             }
@@ -98,7 +94,6 @@ footer {
 
             &_icons {
                 font-family: Open Sans;
-                letter-spacing: 0px;
                 text-align: left;
                 margin: 0 0.6em;
             }
@@ -111,5 +106,9 @@ footer {
 .Container {
     text-align: -webkit-center;
     position: relative;
+
+    @include lt-md {
+        background-color: $background-white;
+    }
 
 }
