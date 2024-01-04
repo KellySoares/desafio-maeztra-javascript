@@ -49,7 +49,7 @@ function NavBar() {
     return (
         <><AppBar className='AppBar'>
             <Box
-                noWrap
+                
                 sx={{
                     mr: 0,
                     display: 'flex',
@@ -65,7 +65,7 @@ function NavBar() {
                 <Toolbar disableGutters>
 
                     <Typography
-                        noWrap
+                        
                         component="a"
                         href="#"
                         sx={{
@@ -119,7 +119,7 @@ function NavBar() {
                         </Menu>
                     </Box>
                     <Typography
-                        noWrap
+                        
                         component="a"
                         href="#"
                         sx={{
