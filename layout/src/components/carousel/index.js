@@ -1,9 +1,5 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Paper } from '@mui/material'
-
-import ButtonComp from '../button';
-import Card from '../card';
+import { Swiper } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/scrollbar';
@@ -14,29 +10,8 @@ import 'swiper/css/pagination';
 import './index.scss';
 import { Autoplay, Keyboard, Navigation, Pagination } from 'swiper/modules';
 
-function Item(props) {
-    return (
-        <>
-            <Paper sx={{ maxHeight: { xs: '320px', md: '600px' } }} >
-                <figure id="container">
-                    <img src={props.item.image} alt={props.item.title} />
-                    <figcaption>
-                        <h2 className='title'>{props.item.title}</h2>
-                        <p className='description'>{props.item.description}</p>
-                        <ButtonComp
-                            key='Conferir'
-                            style={{ color: 'white', display: 'flex', borderRadius: { xs: '4px', md: '10px' } }}
-                            name='Conferir' classname="banner" />
-                    </figcaption>
-                </figure>
-            </Paper>
-        </>
+const Carousel = (props) => {
 
-
-    )
-}
-
-export default function Carousel({ itens, indicators, type, autoplay }) {
     let breakPoints = {
         640: {
             slidesPerView: 1,
@@ -44,11 +19,12 @@ export default function Carousel({ itens, indicators, type, autoplay }) {
         }
     }
     let slidesPerView = 5
-    let module = [Keyboard, Navigation]
-    if (indicators) module.push(Pagination)
-    if (autoplay) module.push(Autoplay)
+    let module = [Keyboard]
+    if (props.indicators) module.push(Pagination)
+    if (props.autoplay) module.push(Autoplay)
+    if (props.navigation) module.push(Navigation)
 
-    if (type === 'Slider') {
+    if (props.type === 'Slider') {
         breakPoints = {
             640: {
                 slidesPerView: slidesPerView - 3,
@@ -86,35 +62,19 @@ export default function Carousel({ itens, indicators, type, autoplay }) {
                 keyboard={{
                     enabled: true,
                 }}
-                navigation={true}
+                navigation={props.navigation}
                 breakpoints={breakPoints}
                 loop="true"
                 pagination={{
                     clickable: true,
                 }}
                 modules={module}
-                className="mySwiper" id={type}
+                className="mySwiper" id={props.type}
             >
-
-                {type === 'Slider' ? itens.map((item, i) => {
-                    return (
-                        <SwiperSlide key={i}>
-                            <Card key={item.id_product} product={item}>
-                                {item.name_product}
-                            </Card>
-                        </SwiperSlide>
-                    )
-                }) :
-                    itens.map((item, i) => {
-                        return (
-                            <SwiperSlide key={i} className={type}>
-                                <Item item={item} />
-                            </SwiperSlide>
-                        )
-                    })
-                }
-
+                {props.children}
             </Swiper>
         </>
     );
 }
+
+export default Carousel;

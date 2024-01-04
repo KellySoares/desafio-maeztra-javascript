@@ -48,66 +48,7 @@
     }
 
 
-    #container {
-        display: flex;
-        position: relative;
-        text-align: left;
-        justify-content: center;
-        margin: 0;
-
-        @include gt-lg {
-            display: contents;
-            position: relative;
-            text-align: left;
-
-            img {
-                width: 100%;
-            }
-        }
-
-        figcaption {
-            position: absolute;
-            top: 145px;
-            color: $color-white;
-            width: 40%;
-            left: 15em;
-            object-fit: cover;
-            object-position: bottom;
-
-            @include lt-lg {
-                top: 40px;
-                left: 5em;
-            }
-
-            .title {
-                font-family: Montserrat;
-                font-size: 40px;
-                font-weight: 700;
-                line-height: 49px;
-                text-align: left;
-
-                @include lt-lg {
-                    font-size: 30px;
-                    line-height: 37px;
-                }
-            }
-
-            .description {
-                font-family: Montserrat;
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 24px;
-                text-align: left;
-
-                @include lt-lg {
-                    font-size: 14px;
-                    line-height: 17px;
-
-                }
-            }
-        }
-
-    }
+    
 }
 
 #Slider {
