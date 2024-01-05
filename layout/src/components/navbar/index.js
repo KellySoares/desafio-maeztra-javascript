@@ -1,18 +1,13 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import MenuItem from '@mui/material/MenuItem';
+import { Box, Container, Typography, IconButton } from '@mui/material';
+import { Toolbar, Menu, MenuItem } from '@mui/material';
 
 import ButtonComp from '../button';
 import Cart from '../cart';
 import Search from '../search';
 
+import MenuIcon from '@mui/icons-material/Menu';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import logo from "../../assets/images/header/logo-maeztra-novo.svg";
@@ -33,6 +28,14 @@ const category = [
     { 'name': 'OUTLET', 'link': '', 'icon': '', 'principal': false }
 ];
 
+const headerText = {
+    mr: 0,
+    display: 'flex',
+    fontSize: '12px',
+    color: '#FFFFFF',
+    justifyContent: 'center',
+    backgroundColor: '#353535'
+}
 function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -48,16 +51,7 @@ function NavBar() {
 
     return (
         <><AppBar className='AppBar'>
-            <Box
-                
-                sx={{
-                    mr: 0,
-                    display: 'flex',
-                    fontSize: '12px',
-                    color: '#FFFFFF',
-                    justifyContent: 'center',
-                    backgroundColor: '#353535'
-                }}>
+            <Box sx={headerText}>
                 Acompanhe as melhores promoções disponíveis aqui na Maeztra.
             </Box>
             <Container maxWidth="xl">
@@ -65,7 +59,6 @@ function NavBar() {
                 <Toolbar disableGutters>
 
                     <Typography
-                        
                         component="a"
                         href="#"
                         sx={{
@@ -119,7 +112,7 @@ function NavBar() {
                         </Menu>
                     </Box>
                     <Typography
-                        
+
                         component="a"
                         href="#"
                         sx={{
@@ -132,7 +125,7 @@ function NavBar() {
                     </Typography>
 
 
-                    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: "center", justifyContent: 'right' }} gap={1} className="AppBar_box-desktop">
+                    <Box gap={1} className="AppBar_box-desktop">
                         <Search />
                         <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }} gap={1}>
 
@@ -144,9 +137,7 @@ function NavBar() {
                             ))}
                         </Box>
 
-
                         <Cart />
-
 
                     </Box>
                 </Toolbar>

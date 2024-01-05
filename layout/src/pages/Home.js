@@ -9,8 +9,8 @@ import TipBar from '../components/tipBar';
 
 import CarouselBanners from '../components/carouselBanners';
 import Card from '../components/card';
-
 import Carousel from '../components/carousel';
+import ModalComp from '../components/modal';
 
 import { Box } from '@mui/material';
 
@@ -25,7 +25,7 @@ import IconEstoqueBrasil from "../assets/images/icons/estoque_brasil.png";
 import IconTrocaGratis from "../assets/images/icons/troca_gratis.png";
 import IconDesconto from "../assets/images/icons/desconto.png";
 import IconFreteGratis from "../assets/images/icons/frete_gratis.svg";
-import ModalComp from '../components/modal';
+
 
 
 const partners = [
@@ -63,7 +63,12 @@ const HomePage = () => {
             )
         })}</Carousel>
         <section>
-            <TipBar style={{ fontSize: '16px', color: '#353535', fontWeight: 700, lineHeight: '24.34px' }} title="Por que comprar na Maeztra?" >
+            <TipBar style={{
+                fontSize: '16px',
+                color: '#353535',
+                fontWeight: 700,
+                lineHeight: '24.34px'
+            }} title="Por que comprar na Maeztra?" >
                 {whyBuy.map((item, index) => (
                     <Box key={index} sx={{ gap: 3, display: 'flex', flexDirection: 'row', alignItems: 'center', backgroundColor: '#EFEFEF', width: '258px', padding: '15px 25px', borderRadius: '4px' }} className='tipbar-box' >
                         <img src={item.icon} alt={item.title} />
@@ -74,7 +79,12 @@ const HomePage = () => {
                     </Box>
                 ))}
             </TipBar>
-            <TipBar style={{ fontSize: { xs: '24px', md: '32px' }, color: '#353535', fontWeight: 700, lineHeight: '49px' }} title="Marcas Parceiras">
+            <TipBar style={{
+                fontSize: { xs: '24px', md: '32px' },
+                color: '#353535',
+                fontWeight: 700,
+                lineHeight: '49px'
+            }} title="Marcas Parceiras">
                 {partners.map((item, index) => (
                     <Box key={index} sx={{ display: 'flex', alignItems: 'center', width: '308px', borderRadius: '4px' }} className='tipbar-box' >
                         <img src={item.image} alt={item.title} className='tipbar-box-image' />
@@ -83,7 +93,13 @@ const HomePage = () => {
             </TipBar>
         </section >
         <section>
-            <Box sx={{ margin: '2em 0 1em', fontSize: { xs: '24px', md: '32px' }, color: '#353535', fontWeight: 700, lineHeight: '49px' }} >As Mais Pedidas</Box>
+            <Box sx={{
+                margin: '2em 0 1em',
+                fontSize: { xs: '24px', md: '32px' },
+                color: '#353535',
+                fontWeight: 700,
+                lineHeight: '49px'
+            }} >As Mais Pedidas</Box>
             {prodState ? <Carousel indicators={false} autoplay={false} navigation={true} type='Slider'>
                 {prodState.products.map((item, i) => {
                     return (
@@ -102,8 +118,6 @@ const HomePage = () => {
         </section>
 
         <NewsLetter />
-
-
 
     </>
 
