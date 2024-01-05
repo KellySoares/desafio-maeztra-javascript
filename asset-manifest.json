@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/desafio-maeztra-javascript/static/css/main.f48a1045.css",
-    "main.js": "/desafio-maeztra-javascript/static/js/main.b762d2c3.js",
+    "main.css": "/desafio-maeztra-javascript/static/css/main.66b509bd.css",
+    "main.js": "/desafio-maeztra-javascript/static/js/main.ceda1764.js",
     "static/media/image 4.png": "/desafio-maeztra-javascript/static/media/image 4.464d77599a3255325bb2.png",
     "static/media/frete_gratis.svg": "/desafio-maeztra-javascript/static/media/frete_gratis.7d58ac899884899b0d2d42c7e0d9aa38.svg",
     "static/media/marca4.svg": "/desafio-maeztra-javascript/static/media/marca4.03ee47082a8b0f8b2bb7e3f3a19ccd07.svg",
@@ -11,15 +11,16 @@
     "static/media/marca1.svg": "/desafio-maeztra-javascript/static/media/marca1.131cebcbf65518e72ed6282fc6ca8dc4.svg",
     "static/media/dress.svg": "/desafio-maeztra-javascript/static/media/dress.e971317c9ea7047fe54ad7b05087ee4b.svg",
     "static/media/logo-maeztra-novo.svg": "/desafio-maeztra-javascript/static/media/logo-maeztra-novo.dc939f26b70f8ce891572620b48daece.svg",
+    "static/media/icon_enviar.svg": "/desafio-maeztra-javascript/static/media/icon_enviar.6870de85aa30b0a36f2c4a154c9cdbf3.svg",
     "static/media/cart.svg": "/desafio-maeztra-javascript/static/media/cart.a51f61e6e18e1a03c7d2e0807d28ed48.svg",
     "index.html": "/desafio-maeztra-javascript/index.html",
     "static/media/next.svg": "/desafio-maeztra-javascript/static/media/next.7d0c880bb24f90b54373.svg",
     "static/media/prev.svg": "/desafio-maeztra-javascript/static/media/prev.c662d0daf45b0c586685.svg",
-    "main.f48a1045.css.map": "/desafio-maeztra-javascript/static/css/main.f48a1045.css.map",
-    "main.b762d2c3.js.map": "/desafio-maeztra-javascript/static/js/main.b762d2c3.js.map"
+    "main.66b509bd.css.map": "/desafio-maeztra-javascript/static/css/main.66b509bd.css.map",
+    "main.ceda1764.js.map": "/desafio-maeztra-javascript/static/js/main.ceda1764.js.map"
   },
   "entrypoints": [
-    "static/css/main.f48a1045.css",
-    "static/js/main.b762d2c3.js"
+    "static/css/main.66b509bd.css",
+    "static/js/main.ceda1764.js"
   ]
 }
