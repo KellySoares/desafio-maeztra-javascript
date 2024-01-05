@@ -1,7 +1,7 @@
 
 # Desafio Maeztra
 
-Este teste se divide em duas etapas, a primeira é um teste lógico resolvido em Javascript. A segunda é um teste de Layout serparado na pasta Layout com suas especificações.
+Este teste se divide em duas etapas, a primeira é um teste lógico resolvido em Javascript. A segunda é um teste de Layout serparado na pasta Layout com suas especificações [Clique Aqui para ter acesso ao Layout](https://github.com/KellySoares/desafio-maeztra-javascript/tree/master/layout)
 
 
 ## Para executar
