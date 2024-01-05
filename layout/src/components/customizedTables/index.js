@@ -8,7 +8,7 @@ import './index.scss';
 const CustomizedTables = (props) => {
 
   return (
-    <TableContainer component={Paper} className='table'>
+    <TableContainer component={Paper} className='table' sx={{ height: '100%',overflow: 'auto' }}>
       <Table sx={{ minWidth: 400 }} aria-label="customized table">
         <TableHead>
           <TableRow>

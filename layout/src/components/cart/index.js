@@ -83,6 +83,7 @@ const Cart = () => {
                         timeout: 500,
                     },
                 }}
+                
             >
                 <Fade in={open}>
 
