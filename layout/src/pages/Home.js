@@ -25,6 +25,7 @@ import IconEstoqueBrasil from "../assets/images/icons/estoque_brasil.png";
 import IconTrocaGratis from "../assets/images/icons/troca_gratis.png";
 import IconDesconto from "../assets/images/icons/desconto.png";
 import IconFreteGratis from "../assets/images/icons/frete_gratis.svg";
+import ModalComp from '../components/modal';
 
 
 const partners = [
@@ -53,6 +54,7 @@ const HomePage = () => {
     const { prodState } = useProducts();
 
     return (<>
+        <ModalComp />
         <Carousel indicators={true} autoplay={true} navigation={true} type='Banner'>{fullBanner.map((item, i) => {
             return (
                 <SwiperSlide key={i} className='Banner'>
