@@ -87,9 +87,9 @@ const Cart = () => {
             >
                 <Fade in={open}>
 
-                    <Box className='modal'>
-                        <Box className='modal-close'>
-                            <Button autoFocus onClick={handleClose} className='modal-close_button'>
+                    <Box className='modal-cart'>
+                        <Box className='modal-cart-close'>
+                            <Button autoFocus onClick={handleClose} className='modal-cart-close_button'>
                                 Fechar
                             </Button>
                         </Box>
