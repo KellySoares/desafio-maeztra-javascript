@@ -60,7 +60,7 @@ const ModalComp = () => {
             >
                 <Fade in={open}>
 
-                    <Box className='modal' sx={{ width: { xs: '80%', md: '60%' } }}>
+                    <Box className='modal' sx={{ width: { xs: '80%', md: '50%' } }}>
                         <Box className='modal-close'>
                             <Button autoFocus onClick={handleClose} className='modal-close_button'>
                                 Fechar
