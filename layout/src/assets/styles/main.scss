@@ -23,16 +23,12 @@ body {
 
     &::-webkit-scrollbar-track {
         background: 'transparent';
-        /* color of the tracking area */
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: $color-secundary;
-        /* color of the scroll thumb */
         border-radius: 20px;
-        /* roundness of the scroll thumb */
         border: 0px solid $background-primary;
-        /* creates padding around scroll thumb */
     }
 }
 
@@ -49,16 +45,11 @@ section {
 }
 
 input {
-    font-family: $font-primary !important;
     color: $color-secundary !important;
     font-size: $font-size !important;
 }
 
-button {
-    font-family: $font-primary !important;
-    font-size: $font-size !important;
-}
 
-a {
-    font-family: $font-primary !important;
+p{
+    margin: 0;
 }

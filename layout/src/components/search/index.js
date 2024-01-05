@@ -1,8 +1,6 @@
 import React from "react";
-import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-import TextField from "@mui/material/TextField";
-import { Button } from "@mui/material";
+import { Button, IconButton, TextField } from "@mui/material";
 
 import './index.scss';
 
@@ -19,7 +17,6 @@ const CssTextField = styled(TextField)({
         borderRadius: '10px',
         paddingRight: '0px',
         backgroundColor: '#EFEFEF',
-        fontSize: '12px',
         '& fieldset': {
             borderColor: 'transparent',
         },
@@ -48,7 +45,6 @@ const Search = () => {
                             variant="contained"
                             sx={{ color: 'white', borderRadius: '10px',border: '0px', margin: '0', padding: '6px 30px' }}
                             onClick={onclick}
-
                             className="search-input_button"
                             disableElevation
                         >Buscar</Button>

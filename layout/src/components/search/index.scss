@@ -12,18 +12,13 @@
         width: 50%;
     }
     input{
-        font-family: $font-primary;
-        color: $color-secundary;
-        font-size: $font-size;
+        font-size: 12px !important;
     }
 
     &-input {
 
         &_button {
-            font-family: $font-primary !important;
-            font-weight: $font-weight!important;
             text-transform: capitalize !important;
-            color: $color-white !important;
             background-color: $color-yellow !important;
 
         }

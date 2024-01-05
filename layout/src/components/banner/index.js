@@ -4,21 +4,26 @@ import { Box } from "@mui/material";
 import './index.scss';
 
 
+const box = {
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row' },
+    alignItems: 'center',
+    justifyContent: 'space-between'
+
+}
+const boxText = {
+    gap: 2,
+    textAlign: 'left',
+    width: '100%',
+    paddingRight: { xs: 0, md: 5 },
+    paddingBottom: { xs: 5, md: 0 }
+}
 const Banner = ({ info }) => {
 
     return (
         <>
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: { xs: 'column', md: 'row' },
-                    alignItems: 'center',
-                    justifyContent: 'space-between'
-                    
-                }}
-                className="banner"
-            >
-                <Box sx={{ gap: 2, textAlign: 'left', width: '100%', paddingRight: { xs: 0, md: 5 }, paddingBottom: { xs: 5, md: 0 } }}>
+            <Box sx={box} className="banner">
+                <Box sx={boxText}>
                     <Box sx={{ fontSize: 24, fontWeight: 700, lineHeight: '37px' }} >
                         {info.title}
                     </Box>

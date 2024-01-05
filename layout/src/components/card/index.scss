@@ -4,6 +4,8 @@
     &-option {
         display: flex;
         flex-direction: row;
+        color: $color-white;
+        border-radius: 4px;
     }
 
     &-preco {

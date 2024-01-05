@@ -2,7 +2,8 @@
 
 
 .banner {
-    color: $color-black !important;
+    color: $color-black;
+
     &-image {
         position: relative;
         max-height: 480px;
@@ -13,7 +14,7 @@
         display: initial;
         margin: auto;
         overflow: hidden;
-    
+
         img {
             width: -webkit-fill-available;
             max-width: 100%;
@@ -22,15 +23,15 @@
             top: -58px;
             border-radius: 4px;
         }
+
         @include lt-lg {
             width: 100%;
-    
+
             img {
                 top: 0;
             }
         }
-    
+
     }
 
 }
-

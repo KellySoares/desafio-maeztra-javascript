@@ -9,26 +9,29 @@
     border-top: 2px solid #EFEFEF;
     padding: 2em 0;
 
-    .text {
-        text-wrap: nowrap;
-    }
-
     .form {
         width: 50%;
 
         @include lt-md {
             width: 100%;
         }
-        
+
         &-input {
-    
+
+            display: flex;
+            width: 70%;
+            color: $color-secundary;
+            justify-content: center;
+            background-color: $color-white;
 
             &_button {
-                font-family: $font-primary;
                 text-transform: capitalize !important;
-                color: $color-white !important;
                 padding: 6px 40px !important;
                 background-color: $color-yellow !important;
+
+                font-weight: 700 !important;
+                font-size: 16px !important;
+                border-radius: 4px !important;
 
             }
         }

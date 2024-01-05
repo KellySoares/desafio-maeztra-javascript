@@ -5,13 +5,40 @@ import NavBar from "../navbar";
 import { Container } from 'react-bootstrap';
 
 import { Box, Link } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
 import CustomExpandIcon from '../customExpandIcon';
 
 import './index.scss';
+
+const styleFooterInfo = {
+    display: { xs: 'none', md: 'flex' },
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-evenly',
+    padding: '2em 30px 2em'
+
+}
+const styleFooterInfoAcordion = {
+    display: { xs: 'flex', md: 'none' },
+    flexDirection: { xs: 'column', md: 'row' },
+    alignItems: 'stretch',
+    justifyContent: 'space-evenly',
+    margin: { xs: '0 30px', lg: '0 80px' },
+    padding: '2em 0',
+    height: { xs: '0', md: '291px' }
+
+}
+const styleFooterIcon = {
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row' },
+    alignItems: 'center',
+    justifyContent: { xs: 'space-evenly', md: 'space-between' },
+    margin: { xs: '0 30px', lg: '0 80px' },
+    height: { xs: '233px', md: '85px' },
+    clear: 'both'
+
+}
 const Layout = ({ children }) => {
 
     const footericons = useSelector(state => state.footerContent[0])
@@ -30,16 +57,7 @@ const Layout = ({ children }) => {
 
         <footer >
             <div className="footer-info">
-                <Box
-                    sx={{
-                        display: { xs: 'none', md: 'flex' },
-                        flexDirection: 'row',
-                        alignItems: 'flex-start',
-                        justifyContent: 'space-evenly',
-                        padding: '2em 30px 2em'
-
-                    }}
-                >
+                <Box sx={styleFooterInfo} >
                     {footerinfo.map((item, index) => {
                         return (
                             <div className="footer-info-content" key={index}>
@@ -62,16 +80,7 @@ const Layout = ({ children }) => {
                     })}
                 </Box>
                 <Box
-                    sx={{
-                        display: { xs: 'flex', md: 'none' },
-                        flexDirection: { xs: 'column', md: 'row' },
-                        alignItems: 'stretch',
-                        justifyContent: 'space-evenly',
-                        margin: { xs: '0 30px', lg: '0 80px' },
-                        padding: '2em 0',
-                        height: { xs: '0', md: '291px' }
-
-                    }}
+                    sx={styleFooterInfoAcordion}
                 >
                     {footerinfo.map((item, index) => {
                         return (
@@ -106,18 +115,7 @@ const Layout = ({ children }) => {
                 </Box>
             </div >
             <div className="footer-icon">
-                <Box
-                    sx={{
-                        display: 'flex',
-                        flexDirection: { xs: 'column', md: 'row' },
-                        alignItems: 'center',
-                        justifyContent: { xs: 'space-evenly', md: 'space-between' },
-                        margin: { xs: '0 30px', lg: '0 80px' },
-                        height: { xs: '233px', md: '85px' },
-                        clear: 'both'
-
-                    }}
-                >
+                <Box sx={styleFooterIcon} >
 
                     {Object.entries(footericons).map((item, index) => {
                         return (
